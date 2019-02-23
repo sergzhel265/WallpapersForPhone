@@ -19,7 +19,7 @@ from kivymd.grid import SmartTileWithLabel
 from kivy.uix.boxlayout import BoxLayout
 from kivymd.navigationdrawer import NavigationDrawerIconButton
 from kivymd.textfields import TextInput
-from kivymd.button import BaseRoundButtongit
+from kivymd.button import BaseRoundButton
 
 
 
@@ -214,7 +214,7 @@ class WallpaperForPhone(App):
     def setWallpaper(self):
         wallpaperManager = WallpaperManager()
         wallpaperManager.setAction(wallpaperManager.ACTION_CROP_AND_SET_WALLPAPER)
-        wallpaperManager.getCropAndSetWallpaperIntent(Uri.parse('http://kivy.org'))
+        wallpaperManager.getCropAndSetWallpaperIntent(Uri.parse(self.root.ids.image.source))
         currentActivity = cast('android.app.Activity', PythonActivity.mActivity)
         currentActivity.startActivity(wallpaperManager)
 
