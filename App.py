@@ -12,7 +12,7 @@ WallpaperManager = autoclass('android.app.WallpaperManager')
 Uri = autoclass('android.net.Uri')
 PythonActivity = autoclass('org.renpy.android.PythonActivity')
 
-import requests
+import requestsgit commit -m "first commit"
 
 from kivymd.theming import ThemeManager
 from kivymd.grid import SmartTileWithLabel
